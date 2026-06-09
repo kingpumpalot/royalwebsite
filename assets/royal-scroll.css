@@ -1,0 +1,177 @@
+/* ================================================
+   ROYAL SCROLL — Faithful recreation of 
+   https://codepen.io/Shegoze/pen/POQdQp
+   Vertical only (no rotation). Thick realistic rolls.
+   ================================================ */
+
+.royal-scroll {
+    --paper: #dac48b;
+    --paper-dark: #c9ad72;
+    --roll-top: #4a2b11;
+    --roll-bottom: #cd9e53;
+    --knob: #5c4633;
+    --shadow: #2c2118;
+
+    position: relative;
+    width: 100%;
+    background: var(--paper);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+/* Paper grain + subtle texture */
+.royal-scroll {
+    background-image:
+        repeating-linear-gradient(135deg, rgba(60,47,31,0.06) 0 1px, transparent 1px 3px),
+        repeating-linear-gradient(45deg, rgba(60,47,31,0.03) 0 1px, transparent 1px 4px);
+}
+
+/* ========== TOP ROLL (thick wooden bar) ========== */
+.royal-scroll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 43px;
+    background: linear-gradient(
+        to bottom,
+        var(--roll-top) 0%,
+        #6b4422 18%,
+        var(--paper-dark) 45%,
+        var(--paper) 100%
+    );
+    box-shadow: 
+        inset 0 18px 20px rgba(0,0,0,0.55),
+        inset 0 -4px 6px rgba(255,255,255,0.35),
+        0 4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+    border-bottom: 1px solid #3a2210;
+}
+
+/* Top roll side highlights */
+.royal-scroll::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 43px;
+    background: linear-gradient(
+        to right,
+        rgba(255,255,255,0.18) 0%,
+        transparent 18%,
+        transparent 82%,
+        rgba(255,255,255,0.12) 100%
+    );
+    z-index: 11;
+    pointer-events: none;
+}
+
+/* ========== BOTTOM ROLL ========== */
+.royal-scroll .scroll-bottom-roll {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 43px;
+    background: linear-gradient(
+        to top,
+        var(--roll-bottom) 0%,
+        #b88c4e 22%,
+        var(--paper-dark) 48%,
+        var(--paper) 100%
+    );
+    box-shadow: 
+        inset 0 -18px 20px rgba(0,0,0,0.55),
+        inset 0 4px 7px rgba(255,255,255,0.35),
+        0 -4px 8px rgba(0,0,0,0.3);
+    z-index: 10;
+    border-top: 1px solid #3a2210;
+}
+
+/* ========== WOODEN KNOBS (rectangular, not circles) ========== */
+.royal-scroll .knob {
+    position: absolute;
+    width: 30px;
+    height: 70px;
+    background: linear-gradient(
+        to right,
+        #6d5844 0%,
+        #5c4633 22%,
+        #463626 78%,
+        #2f221a 100%
+    );
+    border: 3px solid #2c2118;
+    border-radius: 15px / 30px;
+    box-shadow: 
+        3px 4px 8px rgba(0,0,0,0.6),
+        inset -3px 3px 5px rgba(255,255,255,0.4),
+        inset 3px -3px 5px rgba(0,0,0,0.5);
+    z-index: 20;
+}
+
+.royal-scroll .knob-left { left: 12px; }
+.royal-scroll .knob-right { right: 12px; }
+
+.royal-scroll .knob-top { top: 0; }
+.royal-scroll .knob-bottom { bottom: 0; }
+
+/* Small decorative dot in center of knob */
+.royal-scroll .knob::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 7px;
+    height: 7px;
+    background: #2c2118;
+    border-radius: 50%;
+    box-shadow: inset 0 1px 2px rgba(255,255,255,0.35);
+}
+
+/* ========== CONTENT AREA ========== */
+.royal-scroll .scroll-content {
+    position: relative;
+    padding: 58px 42px 54px;
+    z-index: 5;
+    color: #3c2f1f;
+    line-height: 1.5;
+}
+
+.royal-scroll .scroll-content h3 {
+    font-family: 'UnifrakturCook', cursive;
+    color: #8b0000;
+    font-size: 1.35rem;
+    margin: 12px 0 14px;
+    border-bottom: 2px solid #8c6f4d;
+    padding-bottom: 8px;
+}
+
+/* Status badge inside scroll */
+.royal-scroll .status {
+    display: inline-block;
+    padding: 3px 12px;
+    font-size: 0.85rem;
+    border: 2px solid #5c4633;
+    background: #3c2f1f;
+    color: #f4e9d8;
+    margin-bottom: 10px;
+}
+
+.royal-scroll .status.completed {
+    background: #8b0000;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .royal-scroll .scroll-content {
+        padding: 48px 26px 44px;
+    }
+    .royal-scroll .knob {
+        width: 24px;
+        height: 56px;
+    }
+}
