@@ -1,0 +1,36 @@
+{
+  "last_updated": "2026-06-09T22:00:00Z",
+  "source": "https://pump.fun/profile/ayushquant?tab=bounties",
+  "bounties": [
+    {
+      "id": "b1",
+      "title": "Tattoo 'FOR KING PUMPALOT' on your forehead",
+      "description": "Permanent, clear, and visible. No henna. Must send clear photos from multiple angles.",
+      "reward": 25,
+      "status": "live",
+      "deadline": "June 12, 2026",
+      "entries": 3,
+      "submission": null
+    },
+    {
+      "id": "b2",
+      "title": "Shave your head and eyebrows, then oil yourself and dance",
+      "description": "Full head + eyebrows. Oil your body, record a 30-second dance video while shouting the sacred chant.",
+      "reward": 12,
+      "status": "live",
+      "deadline": "June 11, 2026",
+      "entries": 7,
+      "submission": "https://x.com/somejester/status/123456789"
+    },
+    {
+      "id": "b3",
+      "title": "Eat a raw onion while wearing a crown made of toilet paper",
+      "description": "The entire onion. Crown must be worn throughout. Must show tears and suffering.",
+      "reward": 4,
+      "status": "completed",
+      "deadline": "June 5, 2026",
+      "entries": 11,
+      "submission": "https://x.com/anotherpeasant/status/987654321"
+    }
+  ]
+}

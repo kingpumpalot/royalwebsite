@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KING PUMPALOT THE BOUNTIFUL</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+English+SC&display=swap');
+
+        :root {
+            --blood: #a52a2a;
+            --dark: #2c1810;
+        }
+
+        body {
+            background: #1a120b;
+            color: #3c2f1f;
+            font-family: 'IM Fell English SC', serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        .nav {
+            background: #2c1810;
+            padding: 15px 0;
+            border-bottom: 3px solid #5c4633;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .nav a {
+            color: #f4e9d8;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.1rem;
+        }
+
+        .nav a:hover {
+            color: #a52a2a;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 20px 15px;
+        }
+
+        h1 {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 3.8rem;
+            color: #a52a2a;
+            text-shadow: 3px 3px 0 #3c2f1f;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #5c4633;
+            margin-top: -6px;
+        }
+
+        .hero {
+            height: 340px;
+            background: linear-gradient(rgba(0,0,0,0.42), rgba(0,0,0,0.48)), url('kingpumpalotbanner.png');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 25px 0;
+            border: 8px solid #5c4633;
+            box-shadow: 0 0 0 4px #2c1810;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: #f4e9d8;
+            padding: 0 20px;
+        }
+
+        .hero h2 {
+            font-size: 2.4rem;
+            margin: 0;
+            text-shadow: 3px 3px 0 #000;
+        }
+
+        .section {
+            margin-bottom: 50px;
+        }
+
+        h2.section-title {
+            font-family: 'UnifrakturCook', cursive;
+            font-size: 2.1rem;
+            color: #a52a2a;
+            border-bottom: 3px solid #5c4633;
+            padding-bottom: 6px;
+            margin-bottom: 20px;
+        }
+
+        .bounty-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 22px;
+        }
+
+        .bounty-card {
+            background: #f4e9d8;
+            border: 4px solid #5c4633;
+            padding: 22px;
+            box-shadow: 6px 6px 0 #3c2f1f;
+        }
+
+        .bounty-card h3 {
+            margin: 0 0 12px 0;
+            color: #a52a2a;
+            font-size: 1.35rem;
+        }
+
+        .bounty-meta {
+            font-size: 0.92rem;
+            color: #5c4633;
+            margin-bottom: 13px;
+        }
+
+        .reward {
+            font-weight: bold;
+            color: #a52a2a;
+            font-size: 1.3rem;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 3px 12px;
+            font-size: 0.85rem;
+            border: 2px solid #5c4633;
+        }
+
+        .status.live { background: #3c2f1f; color: #f4e9d8; }
+        .status.completed { background: #a52a2a; color: #f4e9d8; }
+
+        .submission-link {
+            display: inline-block;
+            margin-top: 12px;
+            color: #a52a2a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            font-size: 0.9rem;
+            border-top: 3px double #5c4633;
+            color: #5c4633;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.8rem; }
+            .nav-content { justify-content: center; }
+            .nav a { margin: 8px 12px; }
+            .hero { height: 260px; }
+            .hero h2 { font-size: 1.9rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav class="nav">
+        <div class="nav-content">
+            <div><strong style="color:#f4e9d8; font-size:1.25rem;">KING PUMPALOT</strong></div>
+            <div>
+                <a href="index.html">Bounties</a>
+                <a href="thoughts.html">Thought Logs</a>
+                <a href="about.html">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        <header>
+            <h1>KING PUMPALOT</h1>
+            <div class="subtitle">THE BOUNTIFUL • SUPREME RULER OF PUMPFUN</div>
+        </header>
+
+        <!-- HERO IMAGE -->
+        <div class="hero" id="hero">
+            <div class="hero-content">
+                <h2>BOW BEFORE THE KING</h2>
+                <p style="font-size:1.2rem; margin-top:8px;">The greatest memecoin on Solana demands your humiliation.</p>
+            </div>
+        </div>
+
+        <!-- LIVE BOUNTIES -->
+        <div class="section" id="bounties">
+            <h2 class="section-title">LIVE BOUNTIES</h2>
+            <div id="live-bounties" class="bounty-grid"></div>
+        </div>
+
+        <!-- COMPLETED BOUNTIES -->
+        <div class="section">
+            <h2 class="section-title">COMPLETED BOUNTIES</h2>
+            <div id="completed-bounties" class="bounty-grid"></div>
+        </div>
+
+        <footer>
+            <p>All bounties paid in SOL • Videos must contain the sacred chant</p>
+            <p style="margin-top:8px;">
+                <a href="thoughts.html" style="color:#a52a2a;">View the King’s Thought Logs →</a>
+            </p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
