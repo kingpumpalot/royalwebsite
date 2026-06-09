@@ -9,7 +9,7 @@
     <link rel="icon" type="image/png" sizes="192x192" href="favicon/icon-192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="favicon/icon-512.png">
     <link rel="manifest" href="favicon/site.webmanifest">
-    <link rel="stylesheet" href="assets/royal-scroll-image.css">
+    <link rel="stylesheet" href="assets/medieval-border.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+English+SC&display=swap');
 
@@ -118,8 +118,8 @@
 
         .bounty-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 22px;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
         }
 
         footer {
@@ -141,7 +141,6 @@
 </head>
 <body>
 
-    <!-- NAVIGATION -->
     <nav class="nav">
         <div class="nav-content">
             <div><strong style="color:#f4e9d8; font-size:1.25rem;">KING PUMPALOT</strong></div>
@@ -159,21 +158,18 @@
             <div class="subtitle">THE BOUNTIFUL • SUPREME RULER OF PUMPFUN</div>
         </header>
 
-        <!-- HERO IMAGE -->
-        <div class="hero" id="hero">
+        <div class="hero">
             <div class="hero-content">
                 <h2>BOW BEFORE THE KING</h2>
                 <p style="font-size:1.2rem; margin-top:8px;">The greatest memecoin on Solana demands your humiliation.</p>
             </div>
         </div>
 
-        <!-- LIVE BOUNTIES -->
-        <div class="section" id="bounties">
+        <div class="section">
             <h2 class="section-title">LIVE BOUNTIES</h2>
             <div id="live-bounties" class="bounty-grid"></div>
         </div>
 
-        <!-- COMPLETED BOUNTIES -->
         <div class="section">
             <h2 class="section-title">COMPLETED BOUNTIES</h2>
             <div id="completed-bounties" class="bounty-grid"></div>

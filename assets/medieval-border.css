@@ -1,0 +1,105 @@
+/* =====================================================
+   MEDIEVAL BORDER CARD — Simple, clean, regal
+   Works for bounties, thoughts, about page
+   ===================================================== */
+
+.medieval-card {
+    background: #f2e6cc;
+    border: 8px solid #5c4633;
+    box-shadow: 
+        0 0 0 4px #3c2f1f,
+        12px 14px 0 #3c2f1f,
+        inset 0 0 0 3px #d4c49f,
+        inset 0 0 60px rgba(60, 47, 31, 0.12);
+    padding: 38px 42px 34px;
+    position: relative;
+    margin: 24px 0;
+    transition: transform 0.1s ease;
+}
+
+/* Subtle corner flourish */
+.medieval-card::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+    border: 1px solid #8c6f4d;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.medieval-card:hover {
+    transform: translate(-1px, -1px);
+}
+
+/* Inner content */
+.medieval-card .card-inner {
+    position: relative;
+    z-index: 2;
+}
+
+/* Heading */
+.medieval-card h3 {
+    font-family: 'UnifrakturCook', cursive;
+    color: #8b0000;
+    font-size: 1.4rem;
+    margin: 0 0 14px 0;
+    border-bottom: 2px solid #8c6f4d;
+    padding-bottom: 9px;
+}
+
+/* Status badge */
+.medieval-card .status {
+    display: inline-block;
+    padding: 4px 13px;
+    font-size: 0.82rem;
+    border: 2px solid #5c4633;
+    background: #3c2f1f;
+    color: #f4e9d8;
+    margin-bottom: 14px;
+}
+
+.medieval-card .status.completed {
+    background: #8b0000;
+}
+
+/* Meta info */
+.medieval-card .bounty-meta {
+    font-size: 0.94rem;
+    color: #5c4633;
+    margin-bottom: 14px;
+}
+
+.medieval-card .reward {
+    color: #8b0000;
+    font-weight: bold;
+}
+
+/* Links */
+.medieval-card .submission-link {
+    color: #8b0000;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    margin-top: 16px;
+}
+
+/* Thought log entries */
+.medieval-card.entry {
+    padding: 0;
+    cursor: default;
+}
+
+.medieval-card.entry .entry-header {
+    padding: 26px 42px 20px;
+    border-bottom: 2px solid #8c6f4d;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.medieval-card.entry .entry-content {
+    padding: 24px 42px 30px;
+}

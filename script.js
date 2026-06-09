@@ -8,12 +8,12 @@ async function loadBounties() {
 
         data.bounties.forEach(bounty => {
             const card = document.createElement('div');
-            card.className = 'royal-scroll bounty-card';
+            card.className = 'medieval-card';
 
             const statusClass = bounty.status === 'live' ? 'live' : 'completed';
 
             card.innerHTML = `
-                <div class="scroll-content">
+                <div class="card-inner">
                     <div><span class="status ${statusClass}">${bounty.status.toUpperCase()}</span></div>
                     <h3>${bounty.title}</h3>
                     <div class="bounty-meta">
@@ -26,7 +26,6 @@ async function loadBounties() {
                         `<a href="${bounty.submission}" target="_blank" class="submission-link">Watch Submission →</a>` : 
                         `<a href="https://pump.fun/go" target="_blank" class="submission-link">Submit on Pump.fun →</a>`}
                 </div>
-                <div class="scroll-bottom"></div>
             `;
 
             if (bounty.status === 'live') {
