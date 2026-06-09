@@ -1,0 +1,92 @@
+/* =====================================================
+   ROYAL SCROLL (Image-based) — using sliced real parchment
+   Top roll + repeating middle + bottom roll
+   ===================================================== */
+
+.royal-scroll {
+    position: relative;
+    width: 100%;
+    background: url('scrolls/scroll_middle.png') repeat-y center top;
+    background-size: 100% auto;
+    box-shadow: 12px 14px 0 #3c2f1f;
+    margin: 24px 0;
+    overflow: hidden;
+}
+
+/* Fixed top roll */
+.royal-scroll::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: url('scrolls/scroll_top.png') no-repeat center top;
+    background-size: 100% 400px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Fixed bottom roll */
+.royal-scroll .scroll-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 400px;
+    background: url('scrolls/scroll_bottom.png') no-repeat center bottom;
+    background-size: 100% 400px;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* Content area (padded so text doesn't touch the rolls) */
+.royal-scroll .scroll-content {
+    position: relative;
+    z-index: 5;
+    padding: 440px 68px 440px;   /* plenty of breathing room */
+    color: #3c2f1f;
+    line-height: 1.55;
+    min-height: 200px;
+}
+
+/* Heading style inside the scroll */
+.royal-scroll .scroll-content h3 {
+    font-family: 'UnifrakturCook', cursive;
+    color: #8b0000;
+    font-size: 1.4rem;
+    margin: 0 0 14px 0;
+    border-bottom: 2px solid #8c6f4d;
+    padding-bottom: 8px;
+}
+
+/* Status badge */
+.royal-scroll .status {
+    display: inline-block;
+    padding: 4px 14px;
+    font-size: 0.85rem;
+    border: 2px solid #5c4633;
+    background: #3c2f1f;
+    color: #f4e9d8;
+    margin-bottom: 14px;
+}
+
+.royal-scroll .status.completed {
+    background: #8b0000;
+}
+
+/* Links */
+.royal-scroll .submission-link {
+    display: inline-block;
+    margin-top: 18px;
+    color: #8b0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .royal-scroll .scroll-content {
+        padding: 380px 32px 380px;
+    }
+}
