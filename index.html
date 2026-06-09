@@ -127,40 +127,48 @@
         }
 
         .bounty-card {
-            background: #f5e8c7;
-            border: 7px solid #5c4633;
-            padding: 28px 26px 26px;
-            box-shadow: 8px 8px 0 #3c2f1f, 0 0 0 1px #8c6f4d inset;
+            background: #f2e6cc;
+            border: 8px solid #5c4633;
+            padding: 32px 28px 30px;
+            box-shadow: 
+                10px 10px 0 #3c2f1f,
+                0 0 0 2px #8c6f4d inset,
+                0 2px 8px rgba(0,0,0,0.2);
             position: relative;
-            margin: 16px 0;
+            margin: 22px 0;
         }
 
-        /* Scroll roll effect (top & bottom) - thicker and more pronounced */
+        /* Top and bottom scroll rolls - much thicker and more realistic */
         .bounty-card::before,
         .bounty-card::after {
             content: '';
             position: absolute;
-            left: 14px;
-            right: 14px;
-            height: 16px;
-            background: #d4b48c;
-            border: 6px solid #5c4633;
+            left: 10px;
+            right: 10px;
+            height: 26px;
+            background: linear-gradient(#c9a16b, #a07c4f, #c9a16b);
+            border: 7px solid #4a3a2a;
             z-index: -1;
-            box-shadow: 
-                inset 0 3px 6px rgba(0,0,0,0.35),
-                inset 0 -2px 4px rgba(255,255,255,0.15);
         }
 
         .bounty-card::before {
-            top: -16px;
+            top: -22px;
             border-bottom: none;
-            border-radius: 50% 50% 0 0 / 20px 20px 0 0;
+            border-radius: 60% 60% 0 0 / 32px 32px 0 0;
+            box-shadow: 
+                inset 0 8px 12px rgba(0,0,0,0.45),
+                inset 0 -3px 5px rgba(255,255,255,0.12),
+                0 4px 8px rgba(0,0,0,0.3);
         }
 
         .bounty-card::after {
-            bottom: -16px;
+            bottom: -22px;
             border-top: none;
-            border-radius: 0 0 50% 50% / 0 0 20px 20px;
+            border-radius: 0 0 60% 60% / 0 0 32px 32px;
+            box-shadow: 
+                inset 0 -8px 12px rgba(0,0,0,0.45),
+                inset 0 3px 5px rgba(255,255,255,0.12),
+                0 4px 8px rgba(0,0,0,0.3);
         }
 
         .bounty-card h3 {
