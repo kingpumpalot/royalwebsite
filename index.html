@@ -12,11 +12,6 @@
     <style>
         @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+English+SC&display=swap');
 
-        :root {
-            --blood: #a52a2a;
-            --dark: #2c1810;
-        }
-
         body {
             background: #1a120b;
             color: #3c2f1f;
@@ -127,22 +122,14 @@
         }
 
         .bounty-card {
-            background: #f2e6cc;
-            border: 8px solid #5c4633;
-            padding: 30px 26px;
-            box-shadow: 
-                10px 10px 0 #3c2f1f,
-                0 0 0 2px #8c6f4d inset;
+            background-image: url('assets/scrolls/scroll_card.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 38px 32px 34px;
+            box-shadow: 9px 9px 0 #3c2f1f;
             position: relative;
-            margin: 26px 0;
-            background-image: 
-                url('assets/scrolls/roll_top.png'),
-                url('assets/scrolls/roll_bottom.png');
-            background-repeat: no-repeat, no-repeat;
-            background-position: top center, bottom center;
-            background-size: 100% 82px, 100% 82px;
-            padding-top: 94px;
-            padding-bottom: 94px;
+            margin: 18px 0;
+            min-height: 270px;
         }
 
         .bounty-card h3 {
@@ -182,7 +169,7 @@
 
         .submission-link {
             display: inline-block;
-            margin-top: 12px;
+            margin-top: 16px;
             color: #a52a2a;
             text-decoration: none;
             font-weight: bold;

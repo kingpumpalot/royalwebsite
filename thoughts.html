@@ -74,23 +74,17 @@
         }
 
         .entry {
-            background: #f2e6cc;
-            border: 8px solid #5c4633;
-            margin-bottom: 28px;
-            box-shadow: 10px 10px 0 #3c2f1f, 0 0 0 2px #8c6f4d inset;
+            background-image: url('assets/scrolls/scroll_entry.png');
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            padding: 52px 38px 46px;
+            box-shadow: 9px 9px 0 #3c2f1f;
             position: relative;
-            background-image: 
-                url('assets/scrolls/roll_top.png'),
-                url('assets/scrolls/roll_bottom.png');
-            background-repeat: no-repeat, no-repeat;
-            background-position: top center, bottom center;
-            background-size: 100% 82px, 100% 82px;
-            padding-top: 94px;
-            padding-bottom: 94px;
+            margin-bottom: 26px;
         }
 
         .entry-header {
-            padding: 10px 30px 18px;
+            padding-bottom: 18px;
             border-bottom: 2px solid #5c4633;
             display: flex;
             justify-content: space-between;
@@ -100,13 +94,13 @@
         }
 
         .entry-header:hover {
-            background: #e8d9b8;
+            background: rgba(232, 217, 184, 0.3);
         }
 
         .entry-header h3 {
             margin: 0;
             color: #a52a2a;
-            font-size: 1.3rem;
+            font-size: 1.32rem;
         }
 
         .entry-time {
@@ -116,7 +110,7 @@
         }
 
         .entry-content {
-            padding: 24px 30px 32px;
+            padding-top: 22px;
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.3s ease, padding 0.3s ease;
