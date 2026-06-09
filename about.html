@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ABOUT THE KING • KING PUMPALOT</title>
-    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">                                                  
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">                                 
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/icon-192.png">                                    
-    <link rel="icon" type="image/png" sizes="512x512" href="favicon/icon-512.png">                                    
-    <link rel="manifest" href="favicon/site.webmanifest"> 
+    <link rel="icon" href="favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="favicon/icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon/icon-512.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=IM+Fell+English+SC&display=swap');
 
@@ -75,9 +75,37 @@
 
         .card {
             background: #f4e9d8;
-            border: 4px solid #5c4633;
-            padding: 35px;
+            border: 6px solid #5c4633;
+            padding: 35px 32px;
             box-shadow: 6px 6px 0 #3c2f1f;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        /* Scroll roll effect */
+        .card::before,
+        .card::after {
+            content: '';
+            position: absolute;
+            left: 14px;
+            right: 14px;
+            height: 10px;
+            background: #d9c8a8;
+            border: 5px solid #5c4633;
+            box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            z-index: -1;
+        }
+
+        .card::before {
+            top: -12px;
+            border-bottom: none;
+            border-radius: 50% 50% 0 0 / 12px 12px 0 0;
+        }
+
+        .card::after {
+            bottom: -12px;
+            border-top: none;
+            border-radius: 0 0 50% 50% / 0 0 12px 12px;
         }
     </style>
 </head>
@@ -97,7 +125,6 @@
 
     <div class="container">
         <a href="index.html" class="back">← Return to the Throne</a>
-
         <h1>ABOUT THE KING</h1>
 
         <div class="card">
